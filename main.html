@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="./css/main.css" rel="stylesheet">
+  <title>To-Do List - Main</title>
+</head>
+
+<body>
+  <div class="navbar">
+    <li id="title"><a id="nav-title">To-Do</a></li>
+    <li class="link-1"><a href="/" class="custom-underline">Home</a></li>
+
+    <li class="link-2"><a href="#about" class="custom-underline">About</a></li>
+    <div class="dropdown link-3">
+      <button class="dropbtn custom-underline">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Item 1</a>
+        <a href="#">Item 2</a>
+        <a href="#">Item 3</a>
+      </div>
+    </div>
+  </div>
+  <div class="form">
+      <div class="inputBox">
+        <label for="task">Add a task</label>
+        <br>
+        <input type="text" onkeyup="enablePlusBtn()" autocomplete="off" id="addTask" name="task" placeholder="New Task...">
+        <button id="plusBtn">+</button>
+      </div>
+      
+      <div id="tasks">Nothing to show! Use "Add a Task" section above to add tasks.</div>
+      <div class="box-base">
+        <span>You have <span class="pendingTasks"></span> pending tasks</span>
+        <button id="clearBtn" onclick="clearAll()">Clear All</button>
+      </div>
+  </div>
+</body>
+<script src="./js/index.js"></script>
+<script src="./js/task.js"></script>
+
+</html>

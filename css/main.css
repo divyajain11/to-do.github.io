@@ -1,0 +1,265 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting global css */
+input:focus{
+    outline: none;
+}
+
+li{
+    list-style: none;
+}
+
+/* CSS Global Variables */
+/* :root {
+
+} */
+
+/* Navbar container */
+.navbar {
+    /* position: absolute; */
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+  
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Navbar Title */
+#nav-title{
+    font-size: 18px;
+}
+  
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+  
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+/* Add a pink background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: rgb(230, 134, 182);
+}
+  
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Underline Hover Effects */
+.custom-underline {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.custom-underline,
+.custom-underline:hover,
+.custom-underline:focus,
+.custom-underline:active {
+    color: rgb(235, 146, 220);
+    text-decoration: none;
+}
+
+.custom-underline::after {
+    content: "";
+    position: absolute;
+}
+
+.link-1 .custom-underline::after,
+.link-2 .custom-underline::after,
+.link-3 .custom-underline::after
+{
+    top: 65%;
+    height: 2px !important;
+    width: 20%;
+    left: 30%;
+    background-color: rgb(235, 146, 220);
+    transition: 0.4s ease-out all .1s;
+}
+  
+.link-1:hover .custom-underline::after,
+.link-2:hover .custom-underline::after,
+.link-3:hover .custom-underline::after
+{
+    width: 40%;
+    right: 1%;
+    transition: 0.5s ease all;
+}
+
+/* Form */
+.form{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49%, -49%);
+    background-color: rgb(235, 146, 220);
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.2);
+    font-size: 20px;
+}
+
+/* Label */
+label{
+    font-size: 22px;
+}
+
+/* Input Field */
+#addTask{
+    padding: 3px 5px;
+    color: white;
+    margin-top: 5px;
+    background-color: #333;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 80%;
+}
+
+
+/* Plus Button */
+#plusBtn{
+    background-color: #333;
+    color: white;
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 2px 5px;
+    font-weight: 10px;
+    font-size: 20px;
+    opacity: 0.7; 
+    pointer-events: none;
+}
+
+#plusBtn.active{
+    opacity: 1;
+    pointer-events: auto; 
+}
+
+/* Plus Button Hover Effects*/
+#plusBtn:hover{
+    color: #333;
+    background-color: rgb(235, 146, 220);
+    cursor: pointer;
+    border-color: black;
+}
+
+/* Added Tasks */
+#tasks{
+    margin-top: 20px;
+}
+
+.added-todo{
+    background-color: rgb(207, 236, 170);
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+/* Check Button */
+.checkBtn{
+    color: rgb(0, 0, 0);
+    background-color: rgb(207, 236, 170);
+    border: none;
+    float: right;
+    margin-top: 4.5px;
+    margin-right: 4px;
+}
+
+.checkBtn:hover{
+    color: rgb(48, 167, 48);
+}
+
+/* Delete Button */
+.delBtn{
+    color: rgb(0, 0, 0);
+    background-color: rgb(207, 236, 170);
+    border: none;
+    float: right;
+    margin-top: 4.5px;
+}
+
+.delBtn:hover{
+    color: red;
+}
+
+/* To Do Box Footer */
+.box-base{
+    margin-top: 28px;
+}
+
+/* Clear All Button */
+#clearBtn{
+    float: right;
+    background-color: #333;
+    color: white;
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 2px 5px;
+    font-weight: 10px;
+    font-size: 15px;
+    opacity: 0.7; 
+    pointer-events: none;
+}
+
+#clearBtn.active{
+    opacity: 1;
+    pointer-events: auto; 
+}
+
+#clearBtn:hover{
+    background-color: rgb(235, 146, 220);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+
