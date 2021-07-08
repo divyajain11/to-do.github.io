@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body{
+    background-color: #333;
+}
+
 /* Setting global css */
 input:focus{
     outline: none;
@@ -22,7 +26,7 @@ li{
 .navbar {
     /* position: absolute; */
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(22, 21, 21);
     font-family: Arial;
 }
   
