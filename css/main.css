@@ -231,6 +231,19 @@ label{
     color: red;
 }
 
+.editBtn{
+    color: rgb(0, 0, 0);
+    float: right;
+    margin-top: 4.5px;
+    background-color: rgb(207, 236, 170);
+    border: none;
+    margin-right: 4px;
+}
+
+.editBtn:hover{
+    color: rgb(21, 149, 153);
+}
+
 /* To Do Box Footer */
 .box-base{
     margin-top: 28px;

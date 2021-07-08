@@ -58,6 +58,7 @@ function showTasks() {
     taskObj.forEach(function (element, index) {
         html += `<li class="added-todo" id="added-todo${index}"> ${element}
         <button class="delBtn" id="${index}" onclick="deleteTask(this.id)"><i class="fa fa-trash"></i></button>
+        <button class="editBtn"><i class="fa fa-edit"></i></button>
         <button class="checkBtn" id="${index}" onclick="completeTask(this.id)"><i class="fa fa-check"></i></button>
         </li>`;
 
