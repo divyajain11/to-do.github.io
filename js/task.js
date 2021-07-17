@@ -20,6 +20,9 @@ var createNewTaskElement = function(taskString) {
 
     var editInput = document.createElement("input"); // text
     //button.edit
+
+    var editTime = document.createElement("input"); // text
+    //button.edit
     var editButton = document.createElement("button");
     //button.delete
     var deleteButton = document.createElement("button");
@@ -28,6 +31,7 @@ var createNewTaskElement = function(taskString) {
 
     checkBox.type = "checkbox";
     editInput.type = "text";
+    editTime.type = "time";
     timeInput.type = "time";
 
     editButton.innerText = "Edit";
@@ -42,6 +46,7 @@ var createNewTaskElement = function(taskString) {
     listItem.appendChild(label);
     listItem.appendChild(editInput);
     listItem.appendChild(dueTime);
+    listItem.appendChild(editTime);
     listItem.appendChild(editButton);
     listItem.appendChild(deleteButton);
 
@@ -51,24 +56,28 @@ var createNewTaskElement = function(taskString) {
 //Add a new task
 var addTask = function() {
     console.log("Add task...");
-    //Create a new list item with the text from #new-task:
-    var listItem = createNewTaskElement(taskInput.value);
-    //Append listItem to incompleteTasksHolder
-    incompleteTasksHolder.appendChild(listItem);
-    bindTaskEvents(listItem, taskCompleted);
-
+    if (taskInput.value.trim() != 0) {
+        //Create a new list item with the text from #new-task:
+        var listItem = createNewTaskElement(taskInput.value);
+        //Append listItem to incompleteTasksHolder
+        incompleteTasksHolder.appendChild(listItem);
+        bindTaskEvents(listItem, taskCompleted);
+    }
     taskInput.value = "";
     timeInput.value = "";
 }
 
 //Edit an existing task
 var editTask = function() {
-    console.log("Edit task...");
+    console.log("Edit task and time...");
 
     var listItem = this.parentNode;
 
     var editInput = listItem.querySelector("input[type=text");
     var label = listItem.querySelector("label");
+
+    var editTime = listItem.querySelector("input[type=time");
+    var dueTime = listItem.querySelector("span");
 
     var containsClass = listItem.classList.contains("editMode");
 
@@ -77,10 +86,14 @@ var editTask = function() {
         //Switch from .editMode
         //label text become the input's value
         label.innerText = editInput.value;
+        editTime.style.display = "none";
+        dueTime.innerText = editTime.value;
     } else {
         //Switch to .editMode
         //input value becomes the label's text
         editInput.value = label.innerText;
+        editTime.style.display = "block";
+        editTime.value = dueTime.innerText;
     }
 
     //Toggle .editMode on the list item

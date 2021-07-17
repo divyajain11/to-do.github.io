@@ -62,7 +62,7 @@ input,
     border: 0px;
     color: #000;
     font-size: 15px;
-    width: 60px;
+    width: 40px;
     margin: 10px 0 0;
     font-family: Lato, sans-serif;
     cursor: pointer;
@@ -129,6 +129,10 @@ label[for='new-task'] {
     margin: 0 0 20px;
 }
 
+span {
+    margin-top: 9px;
+}
+
 input#new-task {
     float: left;
     width: 318px;
@@ -156,12 +160,17 @@ li>label {
     font-size: 18px;
     line-height: 40px;
     width: 237px;
-    padding: 0 0 0 11px;
+    padding: 0 0 0 10px;
 }
 
 li>input[type="text"] {
     width: 226px;
 }
+
+
+/* li>input[type="time"] {
+    display: none;
+} */
 
 li>.delete:hover {
     color: #CF2323;
@@ -187,6 +196,18 @@ ul li.editMode input[type=text] {
 }
 
 ul li.editMode label {
+    display: none;
+}
+
+ul li input[type=time] {
+    display: none;
+}
+
+ul li.editMode input[type=time] {
+    display: block;
+}
+
+ul li.editMode span {
     display: none;
 }
 
