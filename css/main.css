@@ -121,6 +121,20 @@ input[type="text"]:focus {
     color: #333;
 }
 
+input[type="number"] {
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+    height: 18px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    color: #888;
+    margin-top: 5px
+}
+
 
 /* New Task */
 
@@ -133,14 +147,15 @@ span {
     margin-top: 9px;
 }
 
-input#new-task {
-    /* display: inline-block; */
-    float: left;
-    /* width: 318px; */
-}
+input#new-task {}
 
 p>button:hover {
     color: #0FC57C;
+}
+
+p {
+    display: flex;
+    margin-top: 10px;
 }
 
 

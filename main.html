@@ -30,9 +30,21 @@
 
 
     <div class="container">
+        <h3 for="new-task">Add Item</h3>
         <p>
-            <label for="new-task">Add Item</label><input id="new-task" type="text">
-            <input type="time" name="due-time" id="due-time"><button onclick="addTask()" class="btn" id="add">Add</button>
+            <div class="task">
+                <label for="task-name">Task: </label>
+                <input id="new-task" type="text">
+            </div>
+            <div class="time">
+                <label for="due-time">Set due time: </label>
+                <input type="time" name="due-time" id="due-time">
+            </div>
+            <div class="priority">
+                <label for="priority">Set priority: </label>
+                <input type="number" name="priority">
+            </div>
+            <button onclick="addTask()" class="btn" id="add">Add</button>
         </p>
 
         <h3>Todo</h3>
