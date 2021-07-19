@@ -116,18 +116,6 @@ input[type="time"] {
     color: #888;
 }
 
-@media only screen and (max-width: 767px) {
-    input[type="time"] {
-        margin-top: 5px;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    input[type="time"] {
-        margin-left: 5px;
-    }
-}
-
 input[type="text"]:focus {
     color: #333;
 }
@@ -160,6 +148,28 @@ p>button:hover {
 li {
     overflow: hidden;
     padding: 20px 0;
+}
+
+@media only screen and (max-width: 426px) {
+    li {
+        padding: 5px 0;
+    }
+    input[type="time"] {
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (min-width: 426px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+    }
+    .dropdown {
+        padding: 20px 0;
+    }
+    input[type="time"] {
+        margin-left: 5px;
+    }
 }
 
 li>input[type="checkbox"] {
@@ -267,7 +277,6 @@ ul li.editMode span {
     background-color: inherit;
     font-family: inherit;
     /* Important for vertical align on mobile phones */
-    margin-top: 20px;
 }
 
 
