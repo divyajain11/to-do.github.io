@@ -2,6 +2,7 @@ console.log('Hello, this is task.js!');
 
 var taskInput = document.getElementById("new-task"); //new-task
 var timeInput = document.getElementById("due-time");
+var priorityInput = document.getElementById("priority");
 var addButton = document.getElementsByTagName("button")[0]; //first button
 var incompleteTasksHolder = document.getElementById("incomplete-tasks"); //incomplete-tasks
 var completedTasksHolder = document.getElementById("completed-tasks"); //completed-tasks
@@ -18,6 +19,8 @@ var createNewTaskElement = function(taskString) {
     //input (text)
     var dueTime = document.createElement("span");
 
+    var priority = document.createElement("span");
+
     var editInput = document.createElement("input"); // text
     //button.edit
 
@@ -31,6 +34,7 @@ var createNewTaskElement = function(taskString) {
 
     checkBox.type = "checkbox";
     editInput.type = "text";
+    priorityInput.type = "number";
     editTime.type = "time";
     timeInput.type = "time";
 
@@ -41,10 +45,12 @@ var createNewTaskElement = function(taskString) {
 
     label.innerText = taskString;
     dueTime.innerText = timeInput.value;
+    priority.innerText = priorityInput.value;
     //Each element needs appending
     listItem.appendChild(checkBox);
     listItem.appendChild(label);
     listItem.appendChild(editInput);
+    listItem.appendChild(priority);
     listItem.appendChild(dueTime);
     listItem.appendChild(editTime);
     listItem.appendChild(editButton);
@@ -65,6 +71,7 @@ var addTask = function() {
     }
     taskInput.value = "";
     timeInput.value = "";
+    priorityInput.value = "";
 }
 
 // Execute a function when the user releases a key on the keyboard
