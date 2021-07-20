@@ -62,7 +62,7 @@ input,
     border: 0px;
     color: #000;
     font-size: 15px;
-    width: 40px;
+    width: 46px;
     margin: 10px 0 0;
     font-family: Lato, sans-serif;
     cursor: pointer;
@@ -142,7 +142,7 @@ label[for='new-task'] {
 }
 
 span {
-    margin-top: 9px;
+    margin: 9px 0 8px 5px;
 }
 
 .priority {
@@ -211,7 +211,7 @@ li>input[type="checkbox"] {
 li>label {
     font-size: 18px;
     line-height: 40px;
-    width: 237px;
+    width: 200px;
     padding: 0 0 0 10px;
 }
 
